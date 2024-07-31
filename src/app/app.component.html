@@ -1,14 +1,5 @@
-<div *ngIf="isLoading">Loading...</div>
-<div *ngIf="error">{{ error }}</div>
-<div *ngIf="!isLoading && !error">
-  <form [formGroup]="searchForm" class="search-form">
-    <input formControlName="name" placeholder="Search by name" />
-    <input formControlName="ingredient" placeholder="Search by ingredient" />
-  </form>
-  <div class="recipe-list">
-    <app-recipe-card
-      *ngFor="let recipe of filteredRecipes"
-      [recipe]="recipe"
-    ></app-recipe-card>
-  </div>
-</div>
+<nav>
+  <a routerLink="/home" class="nav-link">Home</a>
+  <a routerLink="/savedRecipes" class="nav-link">Saved Recipes</a>
+</nav>
+<router-outlet></router-outlet>
