@@ -2,6 +2,11 @@
   <img [src]="recipe.image" alt="{{ recipe.name }}" />
   <div class="card-body">
     <h5 class="card-title">{{ recipe.name }}</h5>
+    <p class="card-text">{{ recipe.ingredients }}</p>
     <p class="card-text">{{ recipe.instructions }}</p>
+
+    <button class="save-button" (click)="saveRecipe()">
+      Save to favorites
+    </button>
   </div>
 </div>

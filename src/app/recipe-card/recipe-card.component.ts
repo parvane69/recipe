@@ -8,4 +8,13 @@ import { Recipe } from '../models/recipe.model';
 })
 export class RecipeCardComponent {
   @Input() recipe!: Recipe;
+
+  saveRecipe() {
+    const savedRecipes = JSON.parse(
+      localStorage.getItem('savedRecipes') || '[]'
+    );
+    savedRecipes.push(this.recipe);
+    localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+    alert('Recipe saved!');
+  }
 }
