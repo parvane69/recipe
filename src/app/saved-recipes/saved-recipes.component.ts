@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from '../models/recipe.model';
 
 @Component({
   selector: 'app-saved-recipes',
@@ -7,12 +6,21 @@ import { Recipe } from '../models/recipe.model';
   styleUrls: ['./saved-recipes.component.css'],
 })
 export class SavedRecipesComponent implements OnInit {
-  savedRecipes: Recipe[] = [];
+  savedRecipes: any[] = [];
 
   ngOnInit() {
-    const savedRecipes = localStorage.getItem('savedRecipes');
-    if (savedRecipes) {
-      this.savedRecipes = JSON.parse(savedRecipes);
+    this.loadSavedRecipes();
+  }
+
+  loadSavedRecipes() {
+    const recipes = localStorage.getItem('savedRecipes');
+    if (recipes) {
+      this.savedRecipes = JSON.parse(recipes);
     }
+  }
+
+  removeRecipe(index: number) {
+    this.savedRecipes.splice(index, 1);
+    localStorage.setItem('savedRecipes', JSON.stringify(this.savedRecipes));
   }
 }

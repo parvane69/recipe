@@ -1,11 +1,11 @@
-
 <div *ngIf="savedRecipes.length === 0">No saved recipes found.</div>
 <div *ngIf="savedRecipes.length > 0" class="container">
-<div *ngFor="let recipe of savedRecipes" class="card">
-<img [src]="recipe.image" alt="{{ recipe.name }}" />
-<div class="card-body">
-<h5 class="card-title">{{ recipe.name }}</h5>
-<p class="card-text">{{ recipe.instructions }}</p>
-</div>
-</div>
+  <div *ngFor="let recipe of savedRecipes; let i = index" class="card">
+    <img [src]="recipe.image" alt="{{ recipe.name }}" />
+    <div class="card-body">
+      <h5 class="card-title">{{ recipe.name }}</h5>
+      <p class="card-text">{{ recipe.instructions }}</p>
+      <button (click)="removeRecipe(i)">Remove</button>
+    </div>
+  </div>
 </div>
