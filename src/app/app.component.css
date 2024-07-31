@@ -1,0 +1,12 @@
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 20px;
+}

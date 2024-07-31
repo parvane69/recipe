@@ -1,0 +1,16 @@
+[
+    {
+    "id": 1,
+    "name": "Spaghetti Carbonara",
+    "ingredients": ["spaghetti", "eggs", "parmesan cheese", "bacon"],
+    "instructions": "Cook spaghetti. Mix eggs and cheese. Fry bacon. Combine all.",
+    "image": "assets/images/spagetti.jpg"
+    },
+    {
+    "id": 2,
+    "name": "Chicken Curry",
+    "ingredients": ["chicken", "curry powder", "coconut milk", "onions"],
+    "instructions": "Cook chicken. Add onions and curry powder. Add coconut milk. Simmer.",
+    "image": "assets/images/chicken.jpg"
+    }
+]
